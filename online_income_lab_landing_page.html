@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Income Lab</title>
+  <meta name="description" content="Beginner-friendly resources for learning digital marketing and high-ticket affiliate marketing." />
+  <style>
+    :root{
+      --bg:#f6f3ea;
+      --panel:#ffffff;
+      --ink:#173126;
+      --muted:#6c766f;
+      --gold:#d5ad59;
+      --gold2:#f0d491;
+      --line:#ded8c9;
+      --shadow:0 14px 40px rgba(23,49,38,.12);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:#1b241f;
+      background:linear-gradient(180deg,#fbfaf6 0%,var(--bg) 100%);
+      line-height:1.55;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(10px);
+      background:rgba(251,250,246,.90);
+      border-bottom:1px solid rgba(222,216,201,.8);
+    }
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;color:var(--ink);font-size:1.2rem;letter-spacing:.2px}
+    .brand small{display:block;font-size:.64rem;letter-spacing:2.2px;color:var(--muted);font-weight:700;margin-top:2px}
+    .nav a.btn{padding:11px 18px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700}
+    .hero{padding:90px 0 55px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+    .eyebrow{
+      display:inline-block;background:#efe4c5;color:#5b4520;
+      font-weight:800;letter-spacing:1.6px;text-transform:uppercase;font-size:.78rem;
+      padding:9px 13px;border-radius:999px;margin-bottom:16px
+    }
+    h1{font-size:clamp(2.5rem,6vw,5.5rem);line-height:.94;margin:0 0 22px;color:var(--ink);letter-spacing:-2px}
+    .lead{font-size:1.15rem;color:#4f5d55;max-width:700px;margin-bottom:28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn-primary,.btn-secondary{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 22px;border-radius:14px;font-weight:800;border:1px solid transparent;
+      transition:.2s ease;cursor:pointer
+    }
+    .btn-primary{background:var(--ink);color:#fff;box-shadow:var(--shadow)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{background:#fff;border-color:var(--line);color:var(--ink)}
+    .visual{
+      background:radial-gradient(circle at 20% 10%,#e9d9ad,transparent 30%),linear-gradient(140deg,#173126,#274d3a 65%,#173126);
+      min-height:440px;border-radius:30px;padding:34px;box-shadow:var(--shadow);color:white;display:flex;flex-direction:column;justify-content:space-between
+    }
+    .visual .mini{letter-spacing:2px;text-transform:uppercase;font-size:.75rem;color:#e8ddbf}
+    .visual h2{font-size:2.3rem;line-height:1.05;margin:15px 0 8px}
+    .visual ul{margin:0;padding-left:20px;color:#f6f3ea}
+    .visual .quote{font-size:.95rem;color:#e4eadf;border-top:1px solid rgba(255,255,255,.2);padding-top:16px}
+    section{padding:55px 0}
+    .section-title{font-size:2rem;color:var(--ink);margin:0 0 10px}
+    .section-sub{color:var(--muted);margin:0 0 28px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .card{
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+      padding:28px;box-shadow:0 7px 22px rgba(23,49,38,.06)
+    }
+    .card .tag{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#7a5b20}
+    .card h3{font-size:1.65rem;line-height:1.15;color:var(--ink);margin:10px 0}
+    .card p{color:#5e6a63}
+    .ticks{list-style:none;padding:0;margin:18px 0 22px}
+    .ticks li{margin:10px 0;padding-left:27px;position:relative}
+    .ticks li:before{content:"✓";position:absolute;left:0;color:#7f672e;font-weight:900}
+    .offer-btn{
+      display:inline-block;background:linear-gradient(180deg,var(--gold2),var(--gold));
+      color:#1f251f;font-weight:900;padding:13px 18px;border-radius:12px;
+    }
+    .note{
+      background:#eef2ec;border:1px solid #d6ded4;border-radius:18px;padding:22px;color:#405046
+    }
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+    .num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-weight:900;margin-bottom:12px}
+    footer{padding:40px 0 60px;color:#6c766f;border-top:1px solid var(--line);margin-top:30px}
+    .disclosure{font-size:.9rem;max-width:900px}
+    @media(max-width:820px){
+      .hero-grid,.cards,.steps{grid-template-columns:1fr}
+      .hero{padding-top:55px}
+      .visual{min-height:340px}
+      .nav .hide-mobile{display:none}
+      h1{letter-spacing:-1px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">Online Income Lab
+      <small>LEARN · BUILD · GROW</small>
+    </div>
+    <a class="btn hide-mobile" href="#resources">Explore Resources</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Beginner-friendly digital business resources</span>
+        <h1>Learn the skills behind online growth.</h1>
+        <p class="lead">
+          Simple, beginner-focused resources for understanding digital marketing,
+          affiliate marketing, online promotion and the systems behind digital business.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#resources">See the resources</a>
+          <a class="btn-secondary" href="#how">How it works</a>
+        </div>
+      </div>
+      <div class="visual">
+        <div>
+          <div class="mini">Online Income Lab</div>
+          <h2>Clearer learning.<br>Smarter next steps.</h2>
+          <ul>
+            <li>Digital marketing fundamentals</li>
+            <li>Affiliate marketing education</li>
+            <li>Beginner-friendly training</li>
+          </ul>
+        </div>
+        <div class="quote">No hype. No guaranteed income claims. Just useful resources and transparent recommendations.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="wrap">
+      <h2 class="section-title">Featured resources</h2>
+      <p class="section-sub">Choose the topic that best matches what you want to learn next.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="tag">Affiliate Marketing</div>
+          <h3>Millionaire Partner System</h3>
+          <p>
+            A beginner-focused training offer built around high-ticket affiliate marketing,
+            with step-by-step lessons, a member area and video training.
+          </p>
+          <ul class="ticks">
+            <li>Understand the affiliate model</li>
+            <li>Learn how offers are promoted</li>
+            <li>Build practical online marketing skills</li>
+          </ul>
+          <a class="offer-btn" href="YOUR_MILLIONAIRE_PARTNER_AFFILIATE_LINK" rel="sponsored nofollow">View the full offer →</a>
+        </article>
+
+        <article class="card">
+          <div class="tag">Digital Marketing</div>
+          <h3>Ultimate Digital Marketing Guide eBook</h3>
+          <p>
+            A beginner-friendly guide covering the core areas of digital marketing,
+            including branding, content, social media, SEO, email and affiliate marketing.
+          </p>
+          <ul class="ticks">
+            <li>Learn the digital marketing basics</li>
+            <li>Explore key marketing channels</li>
+            <li>Build a stronger foundation before choosing a specialty</li>
+          </ul>
+          <a class="offer-btn" href="YOUR_DIGITAL_MARKETING_GUIDE_AFFILIATE_LINK" rel="sponsored nofollow">View the guide →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 class="section-title">How Online Income Lab works</h2>
+      <p class="section-sub">Keep it simple: learn first, then decide what is worth pursuing.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><strong>Choose a topic</strong><p>Start with the area you actually want to understand.</p></div>
+        <div class="step"><div class="num">2</div><strong>Review the resource</strong><p>Read what it covers and decide whether it matches your goals.</p></div>
+        <div class="step"><div class="num">3</div><strong>Take the next step</strong><p>If it looks useful, follow the link to the official offer page.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="note">
+        <strong>Important:</strong> Online Income Lab provides educational content and affiliate recommendations.
+        Results vary by person, and no income level is guaranteed. Always review an offer carefully before purchasing.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong style="color:#173126">Online Income Lab</strong>
+    <p class="disclosure">
+      Affiliate disclosure: Some links on this page are affiliate links. If you purchase through one of them,
+      Online Income Lab may earn a commission at no additional cost to you.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
